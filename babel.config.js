@@ -12,7 +12,7 @@ module.exports = function (api) {
             '@utils': './src/utils',
             '@contexts': './src/contexts',
             '@config': './src/config',
-            '@assets': './src/assets',
+            '@assets': './assets',
           },
         },
       ],
