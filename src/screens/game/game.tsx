@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import styles from "./game.styles";
+import { View, Text } from 'react-native';
+import styles from './game.styles';
 
 export default function Game() {
   return (
