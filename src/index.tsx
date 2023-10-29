@@ -24,7 +24,7 @@ export default function App() {
     async function prepare() {
       try {
         await Font.loadAsync(Entypo.font);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (e) {
         console.warn(e);
       } finally {
@@ -41,16 +41,14 @@ export default function App() {
     }
   }, [appIsReady, fontsLoaded]);
 
-  if (!appIsReady || !fontsLoaded) {
-    return null;
-  }
+  if (!appIsReady || !fontsLoaded) return null;
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{ fontSize: 25, fontFamily: 'Inter_900Black' }}>
-        Tic Tac Toe
+      <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 40 }}>
+        Hello World!
       </Text>
-      <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 40 }}>Game</Text>
+      <Entypo name="rocket" size={30} />
       <StatusBar style="auto" />
     </View>
   );
