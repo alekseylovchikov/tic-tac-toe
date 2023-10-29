@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import Entypo from '@expo/vector-icons/Entypo';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {
   useFonts,
   Inter_900Black,
@@ -9,6 +9,7 @@ import {
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback, useEffect, useState } from 'react';
+import { Text } from '@components';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -45,7 +46,7 @@ export default function App() {
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{ fontFamily: 'Inter_400Regular', fontSize: 40 }}>
+      <Text onPress={() => alert(true)} weight="900" style={{ fontSize: 40 }}>
         Hello World!
       </Text>
       <Entypo name="rocket" size={30} />
