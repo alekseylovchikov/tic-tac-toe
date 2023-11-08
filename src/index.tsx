@@ -5,8 +5,8 @@ import Navigator from '@config/navigator';
 export default function App() {
   return (
     <AppBootstrap>
-      <Navigator />
       <StatusBar style="auto" />
+      <Navigator />
     </AppBootstrap>
   );
 }
