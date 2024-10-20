@@ -1,23 +1,27 @@
-import { Text, Button, ScrollView } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
 import { StackNavigatorParams } from '@config/navigator';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { Image, ScrollView, View } from 'react-native';
 
+import { Button, GradientBackground } from '@components';
 import styles from './home.styles';
-import { GradientBackground } from '@components';
 
 type HomeProps = {
   navigation: StackNavigationProp<StackNavigatorParams, 'Home'>;
 };
 
 export default function Home({ navigation }: HomeProps) {
+  console.log(navigation.getState());
+
   return (
     <GradientBackground>
       <ScrollView contentContainerStyle={styles.container}>
-        <Text>Home</Text>
-        <Button
-          title="Game"
-          onPress={() => navigation.navigate('Game', { gameId: '1' })}
-        />
+        <Image style={styles.logo} source={require('@assets/logo.png')} />
+        <View style={styles.buttons}>
+          <Button />
+          <Button />
+          <Button />
+          <Button />
+        </View>
       </ScrollView>
     </GradientBackground>
   );

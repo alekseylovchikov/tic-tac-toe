@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import styles from './game.styles';
+import styles from './single-player-game.styles';
 
 export default function Game() {
   return (
